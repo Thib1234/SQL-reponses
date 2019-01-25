@@ -1,4 +1,4 @@
--- Ex1
+-- Ex1 Donner toutes les informations sur les pilotes
 SELECT * 
 FROM pilotes;
 
