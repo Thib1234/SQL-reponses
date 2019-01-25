@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 25 Janvier 2019 à 13:57
+-- Généré le :  Ven 25 Janvier 2019 à 14:04
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `rayanair`
 --
+CREATE DATABASE IF NOT EXISTS `rayanair` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `rayanair`;
 
 DELIMITER $$
 --
