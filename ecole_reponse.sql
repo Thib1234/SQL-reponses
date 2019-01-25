@@ -1,6 +1,6 @@
 EX01
 
-SELECT FLOOR(AVG(DATEDIFF("2018-12-20",EtuNaiss)/365.25)) as 'age', EtuSexe
+SELECT FLOOR(AVG(DATEDIFF(CURRENT_DATE,EtuNaiss)/365.25)) AS 'age', EtuSexe
 FROM etudiants
 GROUP BY(EtuSexe)
 
