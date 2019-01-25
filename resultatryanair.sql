@@ -141,7 +141,7 @@ WHERE PilSalaire >
 );
 
 -- 20
-SELECT PilNom 
+SELECT PilNom AS "Pilote" 
 FROM pilotes 
 INNER JOIN villes ON PilVilID = VilID 
 WHERE VilNom="nice" AND PilSalaire > (
