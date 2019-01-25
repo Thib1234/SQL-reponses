@@ -19,17 +19,20 @@ INNER JOIN points ON EtuID=PtsEtuID
 INNER JOIN cours ON PtsCouID=CouID
 WHERE isnull(PtsCote) AND CouNom="Sociologie";
 
-/*EX04    "Afficher le nom des matières qui sont enseignées par des maîtres de conférences ou des
-assistants.*/
-
+/*
+	EX04
+	Afficher le nom des matières qui sont enseignées par des maîtres de conférences ou des assistants.
+*/
 SELECT CouNom, ProNom
 FROM cours
 INNER JOIN professeurs ON CouProID=ProID
 WHERE ProStatut="AS" OR ProStatut="MCF";
 
 
-/*EX05    "Afficher par ordre alphabétique d’étudiant (nom et prénom), les points qu'il a obtenus dans
-chaque matière.*/
+/*
+	EX05
+	Afficher par ordre alphabétique d’étudiant (nom et prénom), les points qu'il a obtenus dans chaque matière.
+*/
 SELECT EtuNom, EtuPrenom, CouNom, PtsCote
 FROM etudiants
 INNER JOIN points ON EtuID=PtsEtuID
