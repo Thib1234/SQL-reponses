@@ -148,3 +148,23 @@ FROM etudiants
 INNER JOIN points ON EtuID=PtsEtuID
 INNER JOIN cours ON PtsCouID=CouID
 WHERE isnull(ptsCote);
+
+/*
+    EX 11
+    Afficher, les matières pour lesquelles la moyenne des notes est inférieure à 10. Afficher le nom de l'enseignant correspondant.
+*/
+
+/*
+    EX 12
+    Afficher, pour chaque matière, qu'elle est la meilleure note et quel est le ou les étudiant qui l'ont obtenue.
+*/
+
+/*
+    EX 13
+    Afficher le nombre de garçons et le nombre de filles qui ont réussi tous les cours.
+*/
+
+/*
+    EX 14
+    Afficher, pour chaque sexe (Homme, Femme) la moyenne des notes, par cours, dans les matières enseignées par M Jacquet.
+*/

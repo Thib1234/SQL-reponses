@@ -1,4 +1,19 @@
 # SQL-reponses
-## Intro
-Il etait une fois une ecole (IFOSUP) qui se trouve for for lointain (WAVRE BE), où une petite equipe d'eleves 
-    (-ici- mettre leurs noms S.V.P !)
+## A propos de SQL-Reponses
+Il etait une fois une ecole (**IFOSUP**) qui se trouvait très très loin (**Wavre BE**), où une petite equipe d'élèves réalisait des exercices SQL sans aucun souci sous le regard attentif de leurs professeurs ; *Marc* et *Francois*.
+
+Ce *repository* est un projet permettant de rassembler leurs meilleures réponses dans le cadre du cours.
+
+### Liste de ces braves étudiants :
+* Thibault
+* Benjamin
+* Kevin
+* ...
+
+### Comment ça marche
+Le dossier **ressource** comprend les bases de données sur lesquels les exercices sont basés.
+
+Les réponses exercices en eux-même sont situé dans les fichiers sql à la racine du repository.
+
+### Contribuer
+N'hésitez pas à proposer vos solutions !

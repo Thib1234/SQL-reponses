@@ -223,9 +223,3 @@ SELECT AviID
 FROM avions
 LEFT JOIN vols ON AviID = VolAviID
 WHERE ISNULL(VolID);
-
-
-
-
-
-
