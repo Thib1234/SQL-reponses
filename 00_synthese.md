@@ -16,7 +16,7 @@ SELECT personnes.PerNom FROM personnes
 ```SQL
 SELECT * FROM personnes
 ```
-*Note* : \* est un raccourci qui permet de selectionner tous les attributs
+*Note* : \* est un raccourci qui permet de selectionner tous les attributs.
 ### Sélection avec filtre
 ```SQL
 SELECT personnes.PerNom FROM personnes
@@ -29,11 +29,11 @@ FROM personnes
 ORDER BY personnes.PerNom DESC, personnes.PerPrenom ASC
 ```
 *Notes* :
-- Selection de plusieurs attributs ici grâce à la virgule
-- Ne rien préciser lors du **ORDER BY** équivaut à ORDER BY ASC
+- Selection de plusieurs attributs ici grâce à la virgule.
+- Ne rien préciser lors du **ORDER BY** équivaut à ORDER BY ASC.
 ### Sélection sans doublon
 ```SQL
-SELECT DISTINCT personnes.PerNom FROM personnes
+SELECT DISTINCT personnes.PerPrenom FROM personnes
 WHERE personnes.PerPrenom = "Christophe"
 ```
 ### Selection avec jointure
@@ -45,7 +45,7 @@ WHERE auteurs.AutPrenom = personnes.PerPrenom
 SELECT personnes.PerNom FROM personnes
 WHERE personnes.PerPrenom LIKE "_hristo%"
 ```
-*Note* : **LIKE** à utiliser pour détecter un pattern dans une colonne ( **_** => 1 Char, **%** => plusieurs Char)
+*Note* : **LIKE** à utiliser pour détecter un pattern dans une colonne ( **_** => 1 Char, **%** => plusieurs Char).
 ### Sélection avec requête imbriquée
 ```SQL
 SELECT * FROM auteurs
@@ -54,7 +54,7 @@ WHERE auteurs.AutDateNaiss > (
     WHERE personnes.PerID = 1
 )
 ```
-Dans le cas ou on doit utiliser plusieurs fois la même table, on renomme les tables différemment :
+Dans le cas ou on doit utiliser plusieurs fois la même table dans les SELECT imbriqués, on renomme les sous tables utilisées avec différents **ALIASES** :
 ```SQL
 SELECT * FROM personnes p1
 WHERE p1.PerDateNaiss > (
@@ -71,7 +71,7 @@ WHERE  editeurs.EdiID = livres.LivEdiID
 ```SQL
 SELECT COUNT(personnes.PerID) AS "Nombre de personnes" FROM personnes
 ```
-*Note* : Ici utilisation du mot clé **AS** pour changer le nom de la colonne
+*Note* : Ici utilisation du mot clé **AS** pour changer le nom de la colonne.
 ```SQL
 SELECT MIN(personnes.PerDateNaiss) FROM personnes
 ```
@@ -93,7 +93,7 @@ WHERE livres.LivNbPages > 150
 GROUP BY livres.LivEdiID
 HAVING AVG(livres.LivPrix) < 15
 ```
-*Note* : Ici, on groupe par éditeurs. La clause **WHERE** est exécutée avant regroupemen., la clause **HAVING** est exécutée séparément sur chaque groupe.
+*Note* : Ici, on groupe par éditeurs. La clause **WHERE** est exécutée avant regroupement, la clause **HAVING** est exécutée séparément sur chaque groupe.
 ### Jointure interne
 ```SQL
 SELECT * FROM livres
@@ -182,4 +182,4 @@ WHERE ISNULL(emprunts.EmpID)
 SELECT * FROM livres
 WHERE livres.LivNbPages BETWEEN 200 AND 250
 ```
-*Note* : Entre les valeurs **incluses** []
+*Note* : Entre les valeurs **incluses []**.
