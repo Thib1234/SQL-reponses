@@ -2,22 +2,32 @@
 ## EX01 
 En face de chaque titre d'ouvrage (par ordre alphabétique) afficher le nom et prénom de son auteur.
 ```SQL
-
+	SELECT livres.LivTitre, auteurs.AutNom, auteurs.AutPrenom 
+	FROM livres 
+	INNER JOIN auteurs ON livres.LivAutID = auteurs.AutID
 ```
 ## EX02
 Afficher le nom et le prenom des emprunteurs suivi de la date de ses emprunts.
 ```SQL
-
+	SELECT personnes.PerNom, personnes.PerPrenom, emprunts.EmpDatePret 
+	FROM personnes 
+	INNER JOIN emprunts ON emprunts.EmpPerID = personnes.PerID
 ```
 ## EX03
 Affichez le titre et l'auteur des ouvrages empruntés suivi du nom de leur emprunteurs.
 ```SQL
-
+	SELECT livres.LivTitre, auteurs.AutNom, personnes.PerNom
+	FROM livres 
+	INNER JOIN emprunts ON livres.LivID = emprunts.EmpLivID
+	INNER JOIN auteurs ON livres.LivAutID = auteurs.AutID
+	INNER JOIN personnes ON emprunts.EmpPerID = personnes.PerID
 ```
 ## EX04
 A la suite de problèmes de saisie informatique, il existe un certain nombre d'emprunteurs sans emprunts. Affichez les nom d'emprunteurs, suivi de l'identifiant de tous les emprunts qu'il y en ait un ou non.
 ```SQL
-
+	SELECT personnes.PerNom, personnes.PerPrenom, emprunts.EmpDatePret 
+	FROM personnes 
+	INNER JOIN emprunts ON emprunts.EmpPerID = personnes.PerID
 ```
 ## EX05
 Réunissez dans une seule liste tous les titres de livres contenant le mot « nuit » et tous les titres contenant le mot « noire » par ordre décroissant de titre.

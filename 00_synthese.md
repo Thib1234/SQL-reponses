@@ -81,7 +81,7 @@ WHERE personnes.PerDateNaiss = (SELECT MAX(personnes.PerDateNaiss) FROM personne
 ```
 *Note* : Ici, on a une requête imbriquée pour sélectionner l'enregistrement correspondant mais il n'y a pas besoin de renommer la table utilisée deux fois parce que on compare le max et pas un enregistrement spécifique !
 ```SQL
-SELECT Sum(livres.LivPrix) from livres
+SELECT SUM(livres.LivPrix) from livres
 ```
 ```SQL
 SELECT AVG(livres.LivPrix) from livres
