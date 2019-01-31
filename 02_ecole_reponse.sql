@@ -127,7 +127,7 @@ GROUP BY points.PtsCouID
     Afficher le nom, le prénom et le sexe des étudiants qui ont une note en informatique supérieure à leur note de Mathématique.
 */
 
-SELECT etudiants.EtuNom AS "Prénom", etudiants.EtuPrenom AS "Prénom", etudiants.EtuSexe AS "Sexe"
+SELECT etudiants.EtuNom AS "Nom", etudiants.EtuPrenom AS "Prénom", etudiants.EtuSexe AS "Sexe"
 FROM etudiants
 INNER JOIN points p1 ON etudiants.EtuID = p1.PtsEtuID
 INNER JOIN cours c1 ON p1.PtsCouID = c1.CouID
