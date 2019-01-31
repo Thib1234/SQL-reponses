@@ -4,6 +4,7 @@ Il etait une fois une ecole (**IFOSUP**) qui se trouvait très très loin (**Wav
 
 Ce *repository* est un projet permettant de rassembler leurs meilleures réponses dans le cadre du cours.
 
+Par ailleurs, ce repository contient également une [synthèse](00_synthese.md) des différentes instructions SQL vues en cours.
 ### Liste de ces braves étudiants :
 * Thibault
 * Benjamin
