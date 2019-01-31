@@ -2,8 +2,9 @@
 ## EX01 
 En face de chaque titre d'ouvrage (par ordre alphabétique) afficher le nom et prénom de son auteur.
 ```SQL
-SELECT FLOOR(AVG(DATEDIFF(now(), EtuNaiss) / 365.25)) AS "Age moyen", EtuSexe AS "Sexe" FROM etudiants
-GROUP BY EtuSexe
+SELECT livres.LivTitre AS "Titre", auteurs.AutNom AS "Nom auteur", auteurs.AutPrenom AS "Prénom auteur" FROM livres
+INNER JOIN auteurs ON livres.LivAutID = auteurs.AutID
+ORDER BY livres.LivTitre
 ```
 ## EX02
 Afficher le nom et le prenom des emprunteurs suivi de la date de ses emprunts.
