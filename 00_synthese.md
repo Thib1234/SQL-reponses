@@ -143,10 +143,10 @@ SELECT DATEDIFF(auteurs.AutDateDeces, auteurs.AutDateNaiss)/365.25, auteurs.AutN
 - Ici, on divise le total par 365.25 pour obtenir un résultat en années.
 ### Fonction NOW()
 ```SQL
-SELECT now()
+SELECT NOW()
 ```
 ```SQL
-SELECT DATEDIFF(now(), personnes.PerDateNaiss)/365.25, personnes.PerNom FROM personnes
+SELECT DATEDIFF(NOW(), personnes.PerDateNaiss)/365.25, personnes.PerNom FROM personnes
 ```
 Note: Fonction **NOW()** renvoit la date et l'heure actuelle. On s'en sert ici pour calculer l'age des personnes.
 ### fonction FLOOR(float)
