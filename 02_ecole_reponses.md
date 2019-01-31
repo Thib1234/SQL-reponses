@@ -1,4 +1,4 @@
-# Exercices Base de donnée Ryanair
+# Exercices Base de donnée Ecole
 ## EX01
 Afficher quel est l'âge moyen des garçons et des filles ?
 ```SQL
@@ -143,13 +143,13 @@ Pour les étudiants n'ayant pas de note dans une matière, afficher le nom de 
 ```
 
 ## EX11
-    Afficher, les matières pour lesquelles la moyenne des notes est inférieure à 10. Afficher le nom de l'enseignant correspondant.
+Afficher, les matières pour lesquelles la moyenne des notes est inférieure à 10. Afficher le nom de l'enseignant correspondant.
 ```SQL
 	
 ```
 
 ## EX12
-    Afficher, pour chaque matière, qu'elle est la meilleure note et quel est le ou les étudiant qui l'ont obtenue.
+Afficher, pour chaque matière, qu'elle est la meilleure note et quel est le ou les étudiant qui l'ont obtenue.
 ```SQL
 	
 ```
@@ -161,7 +161,7 @@ Pour les étudiants n'ayant pas de note dans une matière, afficher le nom de 
 ```
 
 ## EX14
-    Afficher, pour chaque sexe (Homme, Femme) la moyenne des notes, par cours, dans les matières enseignées par M Jacquet.
+Afficher, pour chaque sexe (Homme, Femme) la moyenne des notes, par cours, dans les matières enseignées par M Jacquet.
 ```SQL
 	
 ```
