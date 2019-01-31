@@ -155,7 +155,7 @@ Afficher, pour chaque matière, qu'elle est la meilleure note et quel est le ou 
 ```
 
 ## EX13
-    Afficher le nombre de garçons et le nombre de filles qui ont réussi tous les cours.
+Afficher le nombre de garçons et le nombre de filles qui ont réussi tous les cours.
 ```SQL
 	
 ```
