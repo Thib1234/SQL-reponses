@@ -44,7 +44,7 @@ WHERE livres.LivTitre LIKE "%noire%" OR livres.LivTitre LIKE "%nuit%"
 ORDER BY LivTitre DESC
 ```
 
-# EX06
+## EX06
 On veut afficher le titre des livres qui contiennent à la fois « noire » et « nuit ».
 ```SQL
 SELECT livres.LivTitre AS "Titre" FROM livres
