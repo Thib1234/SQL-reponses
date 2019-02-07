@@ -145,13 +145,26 @@ Pour les étudiants n'ayant pas de note dans une matière, afficher le nom de 
 ## EX11
 Afficher, les matières pour lesquelles la moyenne des notes est inférieure à 10. Afficher le nom de l'enseignant correspondant.
 ```SQL
-	
+SELECT cours.CouNom AS "Matiere" , AVG(points.PtsCote) AS "Cote moyenne", professeurs.ProNom FROM points
+INNER JOIN cours ON points.PtsCouID = cours.CouID
+INNER JOIN professeurs ON professeurs.ProID = cours.CouProID
+GROUP BY cours.CouNom, professeurs.ProNom
+HAVING AVG(points.PtsCote) < 10
 ```
 
 ## EX12
 Afficher, pour chaque matière, qu'elle est la meilleure note et quel est le ou les étudiant qui l'ont obtenue.
 ```SQL
-	
+SELECT MAX(points.PtsCote) AS "Cote", cours.CouNom AS "Matiere", etudiants.EtuNom AS "etudiant" 
+FROM etudiants
+INNER JOIN points ON etudiants.EtuID = points.PtsEtuID
+INNER JOIN cours ON points.PtsCouID = cours.CouID
+WHERE points.PtsCote = (
+    SELECT MAX(p2.PtsCote) 
+    FROM points p2 
+    WHERE p2.PtsCouID = points.PtsCouID
+)
+GROUP BY cours.CouID, etudiants.EtuID	
 ```
 
 ## EX13
