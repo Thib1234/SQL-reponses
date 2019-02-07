@@ -170,12 +170,24 @@ GROUP BY cours.CouID, etudiants.EtuID
 ## EX13
 Afficher le nombre de garçons et le nombre de filles qui ont réussi tous les cours.
 ```SQL
-	
+SELECT COUNT(etudiants.EtuID) AS "Nombre d'étudiants ayant réussi tous les cours", etudiants.EtuSexe AS "Sexe" 
+FROM etudiants
+WHERE etudiants.EtuID NOT IN (
+	SELECT eRate.EtuID FROM etudiants eRate
+	INNER JOIN points ON eRate.EtuID = points.PtsEtuID
+	WHERE points.PtsCote < 10 OR points.PtsCote IS NULL  
+	GROUP BY eRate.EtuID
+)
+GROUP BY etudiants.EtuSexe
 ```
 
 ## EX14
 Afficher, pour chaque sexe (Homme, Femme) la moyenne des notes, par cours, dans les matières enseignées par M Jacquet.
 ```SQL
-	
+SELECT AVG(points.PtsCote) AS "Note moyenne", etudiants.EtuSexe AS "Sexe", cours.CouNom AS "Cours" FROM points
+INNER JOIN cours ON points.PtsCouID = cours.CouID
+INNER JOIN etudiants ON points.PtsEtuID = etudiants.EtuID
+WHERE cours.CouProID = 1
+GROUP BY etudiants.EtuSexe, cours.CouNom
 ```
 
