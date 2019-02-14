@@ -61,5 +61,11 @@ WHERE clients.CliID NOT IN (
 ## EX07
 Quelle est le nom et le coût de l’activité la plus cher de *Venusa* ?
 ```SQL
-
+SELECT activites.ActLibelle, activites.ActPrix FROM stations
+INNER JOIN activites ON stations.StaID = activites.ActStaID
+WHERE stations.StaNom = 'Venusa' AND activites.ActPrix = (
+	SELECT MAX(a2.ActPrix) FROM stations s2
+	INNER JOIN activites a2 ON s2.StaID = a2.ActStaID
+	WHERE s2.StaNom = 'Venusa'
+)
 ```
