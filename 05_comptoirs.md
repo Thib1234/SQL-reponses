@@ -126,8 +126,6 @@ GROUP BY t_employes.emp_pk
 <br>
 
 ```SQL
-On considère les employés comme des commerciaux. Quel est celui qui a le chiffre d’affaires le moins élevé (les remises (%) doivent entrer en ligne de compte).
-
 SELECT t_employes.emp_Nom, t_employes.emp_Prenom, 
 SUM(t_detcom.det_Pu * t_detcom.det_Qte - (t_detcom.det_Pu * t_detcom.det_Qte * t_detcom.det_remise)) AS 'Chiffre d\'affaire'
 FROM t_employes
