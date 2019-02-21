@@ -195,7 +195,7 @@ WHERE t_fournisseurs.four_pays IN (
 <details>
 <summary>
   <strong>EX11 :</strong>
-  Parmi les commandes dont le prix total est supérieur à la moyenne des prix totaux quelle la moyenne de celles-ci.
+  Parmi les commandes dont le prix total est supérieur à la moyenne des prix totaux quelle est la moyenne de celles-ci.
 </summary>
 <br>
 
