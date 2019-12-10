@@ -8,10 +8,10 @@ Par ailleurs, ce repository contient également une [synthèse](00_synthese.md) 
 
 Celle ci est également disponible [en version pdf](/ressources/00_Synthese_Francois.pdf) dans le dossier ressources !
 ### Liste de ces braves étudiants :
-* Thibault
-* Benjamin
-* Kevin
-* ...
+* [Thibault](https://github.com/Thib1234)
+* [Benjamin](https://github.com/Ethanox)
+* [Kevin](https://github.com/trallocnivek242)
+* [Francois](https://github.com/fheersbrandt)
 
 ### Comment ça marche
 Le dossier **ressource** comprend les bases de données sur lesquels les exercices sont basés.
